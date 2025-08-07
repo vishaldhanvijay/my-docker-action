@@ -1,0 +1,15 @@
+  GNU nano 7.2                                          action.yml *                                                  
+ame: 'My Docker Action'
+description: 'A simple Docker-based GitHub Action'
+inputs:
+  my-input:
+    description: 'An example input'
+    required: true
+    default: 'Hello'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.my-input }}
+
+
